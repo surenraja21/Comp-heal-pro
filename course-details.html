@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Course Details</title>
+</head>
+<body>
+
+    <style>
+        /* Courses Section */
+        .courses-section {
+            padding: 50px 0;
+        }
+
+        .course-card {
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .course-img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .course-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .course-description {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .course-card-body {
+            padding: 20px;
+        }
+
+         /* Footer Section */
+         .footer {
+            background-color: #4c6ef5;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+         /* Navbar Styling */
+         .navbar {
+            background-color: #4c6ef5;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa !important;
+        }
+
+    </style>
+
+     <!-- Navbar Start -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: white;">Comptechheal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="working.html" style="color: white;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html" style="color: white;">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: white;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->     
+
+    <section class="courses-section text-center">
+        <div class="container" >
+            <h2 class="mb-5">Our Popular Courses</h2>
+            <div class="row g-4" id="courses">
+
+            </div>
+        </div>
+</section>
+
+<script>
+
+
+let courses = {
+
+    webdevelopement:[
+       {
+        "title": "HTML, CSS, JS",
+        "description": "Learn the basics of web development with HTML, CSS, and JavaScript.",
+        "image": "images/courses/html.png",
+       },
+       {
+        "title": "React JS",
+        "description": "Build scalable and efficient web applications with React JS.",
+        "image": "images/courses/react.png",
+       },
+       {
+        "title": "Angular JS",
+        "description": "Build complex and dynamic web applications with Angular JS.",
+        "image": "images/courses/angular.png",
+       },
+       {
+        "title": "Bootstrap",
+        "description": "Build responsive and mobile-first web applications with Bootstrap.",
+        "image": "images/courses/bootstrap.png",
+       },
+       {
+        "title": "Django",
+        "description": "Build robust and scalable web applications with Django.",
+        "image": "images/courses/django.png",
+       },
+       {
+        "title": "Flask",
+        "description": "Build lightweight and flexible web applications with Flask.",
+        "image": "images/courses/flask.png",
+       },
+       {
+        "title": "Spring Boot",
+        "description": "Build robust and scalable web applications with Spring Boot.",
+        "image": "images/courses/springboot.png",
+       },
+       {
+        "title": "PHP",
+        "description": "Build dynamic and interactive web applications with PHP.",
+        "image": "images/courses/php.png",
+       },
+       {
+        "title": "Laravel",
+        "description": "Build robust and scalable web applications with Laravel.",
+        "image": "images/courses/laravel.png",
+       }
+    ],
+    datascience:[
+        {
+            "title": "Python",
+            "description": "Learn the basics of Python programming language.",
+            "image": "images/courses/python.png",
+        },
+        {
+            "title": "R",
+            "description": "Learn the basics of R programming language.",
+            "image": "images/courses/r.png",
+        },
+        {
+            "title": "Machine Learning",
+            "description": "Learn the basics of machine learning with Python",
+            "image": "images/courses/laravel.png",
+        },
+        {
+            "title": "AI",
+            "description": "Learn the basics of AI with Python",
+            "image": "images/courses/ai.png",
+        }
+    ],
+    dataanalysis:[
+        {
+            "title": "Excel",
+            "description": "Learn the basics of Excel and data analysis.",
+            "image": "images/courses/excel.png",
+        },
+        {
+            "title": "Tableau",
+            "description": "Learn the basics of data visualization with Tableau.",
+            "image": "images/courses/tableau.png",
+        },
+        {
+            "title": "Power BI",
+            "description": "Learn the basics of data visualization with Power BI.",
+            "image": "images/courses/powerbi.png",
+        },
+        {
+            "title": "R",
+            "description": "Learn the basics of R programming language with data analysis and visuvalization.",
+            "image": "images/courses/r.png",
+        },
+        {
+            "title": "Python",
+            "description": "Learn the basics of Python programming language with data analysis and visuvalization",
+            "image": "images/courses/python.png",
+        },
+        {
+            "title": "SQL",
+            "description": "Learn the basics of SQL programming language with data analysis",
+            "image": "images/courses/mysql.png",
+        },
+        {
+            "title": "Numpy",
+            "description": "Learn the basics of Numpy library with data analysis",
+            "image": "images/courses/numpy.png",
+        },
+        {
+            "title": "Pandas",
+            "description": "Learn the basics of Pandas library with data analysis",
+            "image": "images/courses/pandas.png",
+        },
+        {
+            "title": "Matplotlib",
+            "description": "Learn the basics of Matplotlib library with data visualization",
+            "image": "images/courses/matplot.png",
+
+        }
+    ],
+    graphicsdesign:[
+        {
+            "title": "Adobe Photoshop",
+            "description": "Learn the basics of Adobe Photoshop with image editing and manipulation.",
+            "image": "images/courses/ps.png",
+        },
+        {
+            "title": "Adobe Illustrator",
+            "description": "Learn the basics of Adobe Illustrator with vector graphics and design",
+            "image": "images/courses/adobe.png",
+        },
+        {
+            "title": "UI/UX Design",
+            "description": "Learn the basics of UI/UX Design with user experience and user interface",
+            "image": "images/courses/uiux.png",
+        },
+    ],
+    fullstack:[
+        {
+            "title": "Java Stack Development",
+            "description": "Learn the basics of Java Stack Development with backend and frontend development",
+            "image": "images/courses/javafullstack.png",
+        },
+        {
+            "title": "Python Stack Development",
+            "description": "Learn the basics of Python Stack Development with backend and frontend development",
+            "image": "images/courses/pythonfullstack.png",
+        },
+    ]
+
+}
+
+let currentsession = sessionStorage.getItem("explore")
+
+let course = ['webdevelopement','fullstack','datascience','graphicsdesign','dataanalysis','datascience']
+
+if(currentsession == "all"){
+
+   
+    let displayedCourses = new Set();
+
+for (let i = 0; i < course.length; i++) {
+    courses[`${course[i]}`].forEach((val) => {
+        // Check if the course title is already displayed
+        if (!displayedCourses.has(val.title)) {
+            // If not, add the course to the displayed list and display it
+            displayedCourses.add(val.title);
+
+            // Dynamically create and append the course card
+            document.getElementById("courses").innerHTML += `
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="${val.image}" class="card-img-top course-img" alt="Course Image">
+                    <div class="card-body">
+                        <h5 class="course-title">${val.title}</h5>
+                        <p class="course-description">${val.description}</p>
+                        <a href="working.html" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+    });
+}
+
+}else{
+
+    courses[`${currentsession}`].map((val)=>{
+    
+    document.getElementById("courses").innerHTML += `
+            
+          <div class="col-md-4">
+                    <div class="card course-card">
+                        <img src=${val.image} class="card-img-top course-img" alt="Course 1">
+                        <div class="card-body">
+                            <h5 class="course-title">${val.title}</h5>
+                            <p class="course-description">${val.description}</p>
+                            <a href="working.html" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+        `;
+    
+})
+}
+
+</script>
+
+ <!-- Footer Start -->
+ <footer class="footer">
+    <p>&copy; 2025 Comptechheal. All Rights Reserved.</p>
+</footer>
+<!-- Footer End -->
+
+</body>
+</html>

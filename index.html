@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="styles/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="styles/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <script src="styles/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <title>Welcome To Comptechheal</title>
+    <style>
+        /* Image container full-screen styling */
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            
+            overflow: hidden;
+        }
+
+        /* Image styling */
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 48px; 
+            font-weight: 600;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+  
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 50px;
+        }
+
+       
+        .section-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .section-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        /* Button styling */
+        .btn-primary {
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+
+        /* Footer styling */
+       /* Footer Section */
+       .footer {
+            background-color: #4c6ef5;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+
+        footer a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<!-- Bootstrap JS for modal -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS to trigger the modal -->
+<script>
+    
+  
+
+   
+
+    if (sessionStorage.getItem("visit") === null) {
+     alert("Hi! This page is under development. Some pages won't work, but you can explore other pages.");
+        sessionStorage.setItem("visit", "1");
+    }
+
+
+</script>
+
+
+
+    <!-- Navbar Start-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">Comptechheal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="working.html" style="color: white;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html" style="color: white;">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: white;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End-->
+
+    <!-- TOP IMAGE START -->
+    <div class="image-container">
+        <img src="images/index/topimage.jpg" alt="Top Image">
+        <div class="overlay-text">Achieve excellence through education.</div>
+    </div>
+    <!-- TOP IMAGE END -->
+
+
+    <!-- Main content section -->
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1>Turning dreams into careers.</h1>
+            <p>
+                At our institute, we believe that every student has the potential to achieve greatness. Our mission is to help transform your aspirations into reality by providing not just education, but a pathway to success. Through a combination of expert-led courses, hands-on experience, and personalized career guidance, we empower you to pursue your passion and build the career you've always dreamed of. Whether you aim to lead in technology, business, healthcare, or any other field, we’re here to turn your dreams into tangible career opportunities. With our strong industry connections, comprehensive placement support, and a focus on real-world skills, we make sure you're not just ready for the workforce—you're prepared to thrive in it.
+            </p>
+        </div>
+
+        <hr>
+
+        <!-- WHAT WE DO START -->
+        <div class="section-header">
+            <h1>WHAT WE DO</h1>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Comprehensive Education and Skill Development</h5>
+                            <p class="card-text">
+                                At our institute, we offer a dynamic and industry-relevant curriculum designed to equip students with the skills needed to excel in today’s competitive job market. Our expert faculty ensures a hands-on learning experience, blending theory with real-world applications. Whether you're studying software engineering, business administration, or healthcare management, we provide you with the knowledge and tools necessary to master your field and stay ahead of industry trends.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Personalized Career Counseling and Mentorship</h5>
+                            <p class="card-text">
+                                Our commitment goes beyond education – we’re dedicated to shaping your career. We offer personalized career counseling, tailored workshops, and one-on-one mentorship programs to guide you through the placement process. Our industry-experienced mentors provide valuable insights, helping you enhance your resume, prepare for interviews, and navigate job offers, ensuring you're fully prepared for success in your chosen profession.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Robust Placement Support and Industry Connections</h5>
+                            <p class="card-text">
+                                We pride ourselves on our strong network of top-tier companies and industry leaders. Our dedicated placement team works relentlessly to connect you with the best job opportunities, from internships to full-time positions. With exclusive job fairs, campus recruitment drives, and on-the-spot interviews, we ensure that our students have the highest chances of securing desirable roles with leading organizations. Your dream job is closer than you think!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WHAT WE DO END -->
+<hr>
+        <!-- EXPLORE COURSES START -->
+        <div class="text-center mt-5">
+            <h1>Learn from the best, become the best.</h1>
+            <a class="btn btn-primary mt-3" href="/courses.html"  >Explore our courses</a>
+        </div>
+        <!-- EXPLORE COURSES END -->
+    </div>
+
+    <hr>
+    <!-- Footer Content Start -->
+    <footer class="footer">
+    <p>&copy; 2025 Comptechheal. All Rights Reserved.</p>
+</footer>
+    <!-- Footer Content End -->
+
+</body>
+</html>
